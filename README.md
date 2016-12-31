@@ -4,7 +4,9 @@ Randomly generate a secret token using base56 charset i.e. alphanumeric upper an
 
 We omit those characters to avoid potential confusion if transcribed by humans e.g. for hand-written backup.
 
-This is suitable for secret URLs, whereas base64 includes slash in its charset.
+This is suitable for secret URLs, whereas base64 includes slash in its charset. 
+
+Incidently, my personal use case is for Telegram.org webhook secrets - see https://github.com/evanx/webhook-publish
 
 It is implemented as follows:
 ```javascript
