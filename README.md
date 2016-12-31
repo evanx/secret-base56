@@ -17,24 +17,19 @@ console.log(string);
 ```
 where we omit letters O and I and digits 0 and 1 e.g. to avoid potential confusion if transcribed by humans.
 
-
+We can build using its `Dockerfile` as follows:
 ```
 docker build -t random-base56 git@github.com:evanx/random-base56.git
 ```
-
+where we have tagged the image, so run:
 ```
 docker run -t random-base56 
 ```
-
-```
-zQPv2WXCuy43nueh
-```
+which gives random output e.g. `zQPv2WXCuy43nueh`
 
 Use `length` envar to change from default `16`
 ```
-docker run -e length=32 59a47707d0fb
-```
-```
+$ docker run -e length=32 59a47707d0fb
 CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb
 ```
 
