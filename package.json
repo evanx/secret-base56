@@ -1,0 +1,29 @@
+{
+  "name": "random-base56",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --cache src",
+    "development": "NODE_ENV=development node --harmony-async-await src/index.js",
+    "test": "NODE_ENV=test node --harmony-async-await src/index.js",
+    "start": "NODE_ENV=production node --harmony-async-await src/index.js"
+  },
+  "author": "Evan Summers",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanx/random-base56.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evanx/random-base56/issues"
+  },
+  "homepage": "https://github.com/evanx/random-base56#readme"
+}
