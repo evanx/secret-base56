@@ -15,3 +15,4 @@ const string = crypto.randomBytes(length)
 .toString();
 console.log(string);
 ```
+where we omit letters O and I and digits 0 and 1 e.g. to avoid potential confusion if transcribed by humans.
