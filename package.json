@@ -1,7 +1,7 @@
 {
   "name": "random-base56",
   "version": "0.0.1",
-  "description": "",
+  "description": "Generate random token base 56 which is alphanumeric upper and lower omitting letters 0 and I and digits zero and one",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --cache src",
