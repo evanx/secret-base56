@@ -1,23 +1,29 @@
 # secret-base56
 
-Generate random token base56 which is alphanumeric upper and lower omitting letters 0 and I and digits zero and one.
+Randomly generate a secret token using base56 charset i.e. alphanumeric upper and lower omitting letters I and O and digits zero and one.
+
+We omit those characters to avoid potential confusion if transcribed by humans e.g. for hand-written backup.
 
 This is suitable for secret URLs, whereas base64 includes slash in its charset.
 
+It is implemented as follows:
 ```javascript
 const assert = require('assert');
 const crypto = require('crypto');
-const Letters24 = 'ABCDEFGHJKLMNPQRSTUVWXYZ'; // exclude I and O since too similar to 0 and 1
-const Digits8 = '23456789'; // omit 0 and 1 to avoid potential confusion with O and I (and perhaps L)
-const Symbols = [Digits8, Letters24, Letters24.toLowerCase()].join('');
-assert.equal(Symbols.length, 56);
+const letters24 = 'ABCDEFGHJKLMNPQRSTUVWXYZ'; // exclude I and O since too similar to 0 and 1
+const digits = '23456789'; // omit 0 and 1 to avoid potential confusion with O and I (and perhaps 'l')
+const charset = [digits, letters24, letters24.toLowerCase()].join('');
+assert.equal(charset.length, 56);
 const length = parseInt(process.env.length || '16');
 const string = crypto.randomBytes(length)
-.map(value => Symbols.charCodeAt(Math.floor(value*Symbols.length/256)))
+.map(value => charset.charCodeAt(Math.floor(value*charset.length/256)))
 .toString();
 console.log(string);
 ```
-where we omit letters `O` and `I` and digits `0` and `1` to avoid potential confusion if transcribed by humans.
+where we generate an array of random bytes (values 0 to 255 inclusive) of the desired `length` and then map those to our charset:
+```
+23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjklmnpqrstuvwxyz
+```
 
 We can build using its `Dockerfile` as follows:
 ```
