@@ -49,4 +49,4 @@ See the following related project which is case-insensitive base32.
 
 https://github.com/evanx/secret-base32
 
-Base32 is better for hand-written backups since some letters have similar shapes in lowercase e.g. c, s, u, v, x
+Base32 is better for hand-written backups since some letters have similar shapes in lowercase e.g. c, s, u, v
