@@ -20,7 +20,7 @@ const string = crypto.randomBytes(length)
 .toString();
 console.log(string);
 ```
-where we generate an array of random bytes (values 0 to 255 inclusive) of the desired `length` and then map those to our charset:
+where we generate an array of random bytes (values 0 to 255 inclusive) of the desired `length` and then map each into our charset:
 ```
 23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjklmnpqrstuvwxyz
 ```
