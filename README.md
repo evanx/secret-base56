@@ -17,7 +17,7 @@ const string = crypto.randomBytes(length)
 .toString();
 console.log(string);
 ```
-where we omit letters O and I and digits 0 and 1 to avoid potential confusion if transcribed by humans.
+where we omit letters `O` and `I` and digits `0` and `1` to avoid potential confusion if transcribed by humans.
 
 We can build using its `Dockerfile` as follows:
 ```
