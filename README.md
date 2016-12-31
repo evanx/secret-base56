@@ -43,3 +43,4 @@ which outputs length `32` token e.g. `CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb`
 
 You can then use this for a secret URL e.g. for a Telegram Bot webhook, or some other purpose.
 
+See the related project which is case-insensitive base32: https://github.com/evanx/secret-base32
