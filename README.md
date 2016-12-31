@@ -31,7 +31,9 @@ which gives random output e.g. `zQPv2WXCuy43nueh`
 
 Use `length` envar to change from default `16`
 ```
-$ docker run -e length=32 random-base56:test
-CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb
+docker run -e length=32 random-base56:test
 ```
+which outputs length `32` token e.g. `CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb`
+
+You can then use this for a secret URL e.g. for a Telegram Bot webhook, or some other purpose.
 
