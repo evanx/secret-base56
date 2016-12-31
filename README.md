@@ -2,6 +2,8 @@
 
 Generate random token base56 which is alphanumeric upper and lower omitting letters 0 and I and digits zero and one.
 
+This is suitable for secret URLs, whereas base64 includes slash in its charset.
+
 ```javascript
 const assert = require('assert');
 const crypto = require('crypto');
@@ -15,7 +17,7 @@ const string = crypto.randomBytes(length)
 .toString();
 console.log(string);
 ```
-where we omit letters O and I and digits 0 and 1 e.g. to avoid potential confusion if transcribed by humans.
+where we omit letters O and I and digits 0 and 1 to avoid potential confusion if transcribed by humans.
 
 We can build using its `Dockerfile` as follows:
 ```
