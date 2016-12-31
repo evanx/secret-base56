@@ -31,7 +31,7 @@ which gives random output e.g. `zQPv2WXCuy43nueh`
 
 Use `length` envar to change from default `16`
 ```
-$ docker run -e length=32 59a47707d0fb
+$ docker run -e length=32 random-base56:test
 CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb
 ```
 
