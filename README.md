@@ -29,3 +29,12 @@ docker run -t random-base56
 ```
 zQPv2WXCuy43nueh
 ```
+
+Use `length` envar to change from default `16`
+```
+docker run -e length=32 59a47707d0fb
+```
+```
+CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb
+```
+
