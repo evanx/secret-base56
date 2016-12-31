@@ -1,4 +1,4 @@
-# random-base56
+# secret-base56
 
 Generate random token base56 which is alphanumeric upper and lower omitting letters 0 and I and digits zero and one.
 
@@ -21,17 +21,17 @@ where we omit letters `O` and `I` and digits `0` and `1` to avoid potential conf
 
 We can build using its `Dockerfile` as follows:
 ```
-docker build -t random-base56:test https://github.com/evanx/random-base56.git
+docker build -t secret-base56:test https://github.com/evanx/secret-base56.git
 ```
 where we tag the image so we can run by tag name:
 ```
-docker run -t random-base56:test 
+docker run -t secret-base56:test 
 ```
 which gives random output e.g. `zQPv2WXCuy43nueh`
 
 Use `length` envar to change from default `16`
 ```
-docker run -e length=32 random-base56:test
+docker run -e length=32 secret-base56:test
 ```
 which outputs length `32` token e.g. `CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb`
 

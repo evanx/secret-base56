@@ -1,5 +1,5 @@
 {
-  "name": "random-base56",
+  "name": "secret-base56",
   "version": "0.0.1",
   "description": "Generate random token base 56 which is alphanumeric upper and lower omitting letters 0 and I and digits zero and one",
   "main": "index.js",
@@ -20,10 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evanx/random-base56.git"
+    "url": "git+https://github.com/evanx/secret-base56.git"
   },
   "bugs": {
-    "url": "https://github.com/evanx/random-base56/issues"
+    "url": "https://github.com/evanx/secret-base56/issues"
   },
-  "homepage": "https://github.com/evanx/random-base56#readme"
+  "homepage": "https://github.com/evanx/secret-base56#readme"
 }
