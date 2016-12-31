@@ -16,3 +16,16 @@ const string = crypto.randomBytes(length)
 console.log(string);
 ```
 where we omit letters O and I and digits 0 and 1 e.g. to avoid potential confusion if transcribed by humans.
+
+
+```
+docker build -t random-base56 git@github.com:evanx/random-base56.git
+```
+
+```
+docker run -t random-base56 
+```
+
+```
+zQPv2WXCuy43nueh
+```
