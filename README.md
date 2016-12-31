@@ -21,17 +21,17 @@ where we omit letters `O` and `I` and digits `0` and `1` to avoid potential conf
 
 We can build using its `Dockerfile` as follows:
 ```
-docker build -t random-base56:test https://github.com/evanx/random-base56.git
+docker build -t random-base56:latest https://github.com/evanx/random-base56.git
 ```
 where we tag the image so we can run by tag name:
 ```
-docker run -t random-base56:test 
+docker run -t random-base56:latest 
 ```
 which gives random output e.g. `zQPv2WXCuy43nueh`
 
 Use `length` envar to change from default `16`
 ```
-docker run -e length=32 random-base56:test
+docker run -e length=32 random-base56:latest
 ```
 which outputs length `32` token e.g. `CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb`
 
