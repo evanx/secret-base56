@@ -43,4 +43,10 @@ which outputs length `32` token e.g. `CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb`
 
 You can then use this for a secret URL e.g. for a Telegram Bot webhook, or some other purpose.
 
-See the related project which is case-insensitive base32: https://github.com/evanx/secret-base32
+## Related 
+
+See the following related project which is case-insensitive base32. 
+
+https://github.com/evanx/secret-base32
+
+Base32 is better for hand-written backups since some letters have similar shapes in lowercase e.g. c, s, u, v, x
