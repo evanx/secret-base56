@@ -8,11 +8,11 @@ This is suitable for secret URLs, whereas base64 includes slash in its charset.
 
 Incidently, my personal use case is for Telegram.org webhook secrets - see https://github.com/evanx/webhook-publish
 
-Use my image on DockerHub
+You can test my image on DockerHub:
 ```
 docker run evanxsummers/secret-base56
 ```
-It should output a random base56 string e.g. `YBqxhgUHrqqqYxW9`
+It should output a random base56 string e.g. `r2CKLsQ4HxfFevdl`
 
 It is implemented as follows:
 ```javascript
