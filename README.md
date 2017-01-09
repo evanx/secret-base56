@@ -4,9 +4,15 @@ Randomly generate a secret token using base56 charset i.e. alphanumeric upper an
 
 We omit those characters to avoid potential confusion if transcribed by humans e.g. for hand-written backup.
 
-This is suitable for secret URLs, whereas base64 includes slash in its charset. 
+This is suitable for secret URLs, whereas base64 includes slash in its charset.
 
 Incidently, my personal use case is for Telegram.org webhook secrets - see https://github.com/evanx/webhook-publish
+
+Use my image on DockerHub
+```
+docker run evanxsummers/secret-base56
+```
+It should output a random base56 string e.g. `YBqxhgUHrqqqYxW9`
 
 It is implemented as follows:
 ```javascript
@@ -33,7 +39,7 @@ docker build -t secret-base56:test https://github.com/evanx/secret-base56.git
 ```
 where we tag the image so we can run by tag name:
 ```
-docker run -t secret-base56:test 
+docker run -t secret-base56:test
 ```
 which gives random output e.g. `zQPv2WXCuy43nueh`
 
@@ -45,9 +51,9 @@ which outputs length `32` token e.g. `CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb`
 
 You can then use this for a secret URL e.g. for a Telegram Bot webhook, or some other purpose.
 
-## Related 
+## Related
 
-See the following related project which is case-insensitive base32. 
+See the following related project which is case-insensitive base32.
 
 https://github.com/evanx/secret-base32
 
