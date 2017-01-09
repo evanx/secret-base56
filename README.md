@@ -35,17 +35,17 @@ where we generate an array of random bytes (values 0 to 255 inclusive) of the de
 
 We can build using its `Dockerfile` as follows:
 ```
-docker build -t secret-base56:test https://github.com/evanx/secret-base56.git
+docker build -t secret-base56 https://github.com/evanx/secret-base56.git
 ```
 where we tag the image so we can run by tag name:
 ```
-docker run -t secret-base56:test
+docker run -t secret-base56
 ```
 which gives random output e.g. `zQPv2WXCuy43nueh`
 
 Use `length` envar to change from default `16`
 ```
-docker run -e length=32 secret-base56:test
+docker run -e length=32 secret-base56
 ```
 which outputs length `32` token e.g. `CMZRUgDU5RxwzhDFh7fV5EKAKz6HmXdb`
 
